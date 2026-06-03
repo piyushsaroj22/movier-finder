@@ -29,14 +29,14 @@ const Navbar = ({
           />
 
           <button
-            className="p-2 text-3xl bg-blue-600 text-white rounded-md"
+            className="p-2 text-3xl bg-blue-600 text-white rounded-md cursor-pointer"
             onClick={handleSearchSubmit}
           >
             <IoSearchSharp />
           </button>
 
           <button
-            className="p-2 text-3xl bg-blue-600 text-white rounded-md relative"
+            className="p-2 text-3xl bg-blue-600 text-white rounded-md relative cursor-pointer"
             onClick={() => setShowFavorites(!showFavorites)}
           >
             <FaHeart />
