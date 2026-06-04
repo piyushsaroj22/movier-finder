@@ -1,5 +1,3 @@
-import React from "react";
-
 const SkeletonLoader = () => {
   const skeletons = Array(10).fill(0);
 

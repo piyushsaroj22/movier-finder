@@ -1,4 +1,3 @@
-import React from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
 
