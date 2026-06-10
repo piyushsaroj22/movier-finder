@@ -1,15 +1,16 @@
 import React from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
 import Navbar from "./components/Navbar";
 import MovieGrid from "./components/MovieGrid";
 
 function App() {
-  const [movies, setMovies] = React.useState([]);
-  const [searchQuery, setSearchQuery] = React.useState("");
-  const [loading, setLoading] = React.useState(false);
+  const [movies, setMovies] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const [favorites, setFavorites] = React.useState(() => {
+  const [favorites, setFavorites] = useState(() => {
     const saved = localStorage.getItem("favorites");
     return saved ? JSON.parse(saved) : [];
   });
@@ -20,9 +21,9 @@ function App() {
     }
   };
 
-  const [showFavorites, setShowFavorites] = React.useState(false);
+  const [showFavorites, setShowFavorites] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }, [favorites]);
 
@@ -95,7 +96,7 @@ function App() {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetchRandomMovies();
   }, []);
 
